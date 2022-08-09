@@ -1,0 +1,66 @@
+stages:
+    - dependencies
+    - test
+    - build
+    - deploy
+
+ng-dependencies:
+  stage: dependencies
+  script:
+    - npm install
+  only:
+    - master
+  cache:
+    key:
+      files:
+        - package-lock.json
+    paths:
+      - node_modules
+    policy: pull
+  tags: ["runner-hom-angular"]
+
+ng-build:
+  image: node:7.7.2-alpine
+  stage: build
+  script:
+        - ls
+        - echo "Tentando construir o Build"
+        - npm update
+        - ng build
+  artifacts:
+    paths:
+        - dist/
+
+  tags: ["runner-hom-angular"]
+  only:
+    - master
+  cache:
+    key:
+      files:
+        - package-lock.json
+    paths:
+      - node_modules
+  
+ng-test:
+    stage: test
+    script: 
+        - echo "testando"
+        #- ng test
+    tags: ["runner-hom-angular"]
+    only:
+    - master
+
+    
+ng-deploy:
+    stage: deploy
+    script:
+        - ls
+        - copy .\dist\pagrn-front\* "C:\inetpub\wwwroot\angular-pagbem" -recurse -force
+
+    tags: ["runner-hom-angular"]
+    only:
+    - master
+
+    #only:
+        #- master
+    

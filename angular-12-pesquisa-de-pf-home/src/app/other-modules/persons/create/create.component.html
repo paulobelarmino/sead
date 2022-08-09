@@ -1,0 +1,121 @@
+<div class="content" >
+    <mat-card class="example-card" >
+        <mat-card-content>
+            <form [formGroup]="form" fxFlex fxLayout="row wrap"  fxLayoutGap="5px grid">
+                
+                
+                    <mat-form-field appearance="outline" fxFlex="100" >
+                      <mat-label>NOME COMPLETO:</mat-label>
+                      <input matInput placeholder="Digite o nome da pessoa">
+                    </mat-form-field>
+                
+
+                
+                    <mat-form-field appearance="outline" fxFlex="100" >
+                      <mat-label>NOME SOCIAL:</mat-label>
+                      <input matInput placeholder="Digite o nome da pessoa">
+                    </mat-form-field>
+                
+                
+                
+                    <mat-form-field appearance="outline" fxFlex="100">
+                      <mat-label>NOME DA MÃE:</mat-label>
+                      <input matInput placeholder="Digite o nome da pessoa">
+                    </mat-form-field>
+                
+
+                
+                    <mat-form-field appearance="outline" fxFlex="100">
+                      <mat-label>NOME DO PAI:</mat-label>
+                      <input matInput placeholder="Digite o nome da pessoa">
+                    </mat-form-field>
+                    
+                    
+
+                    <mat-form-field appearance="outline" fxFlex="50">
+                        <mat-label>Etnia</mat-label>
+                        <mat-select>
+                          <mat-option value="option">Negro</mat-option>
+                          <mat-option value="option">Solteiro</mat-option>
+                          <mat-option value="option">União</mat-option>
+                          <mat-option value="option">Viúvo</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                
+                    <mat-form-field appearance="outline" fxFlex="50">
+                        <mat-label>ESTADO CIVIL</mat-label>
+                        <mat-select>
+                          <mat-option value="option">Casado</mat-option>
+                          <mat-option value="option">Solteiro</mat-option>
+                          <mat-option value="option">União</mat-option>
+                          <mat-option value="option">Viúvo</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                
+
+                
+                    <mat-form-field appearance="outline" fxFlex="50">
+                        <mat-label>TIPO SANGUÍNEO</mat-label>
+                        <mat-select>
+                          <mat-option value="option">TIPO SANGUÍNEO</mat-option>
+                          <mat-option value="option">A-</mat-option>
+                          <mat-option value="option">A+</mat-option>
+                          <mat-option value="option">B-</mat-option>
+                          <mat-option value="option">B+</mat-option>
+                          <mat-option value="option">AB-</mat-option>
+                          <mat-option value="option">AB+</mat-option>
+                          <mat-option value="option">O-</mat-option>
+                          <mat-option value="option">O+</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                
+                
+                
+                <mat-form-field>
+                  <input matInput placeholder="Nome" formControlName="nome" />
+                </mat-form-field>
+                <br />
+                <mat-form-field>
+                    <input matInput placeholder="Email" formControlName="email" />
+                </mat-form-field>
+                <br />
+                <mat-form-field>
+                    <input matInput placeholder="Gênero" formControlName="genero" />
+                </mat-form-field>
+                <br />
+                <mat-form-field>
+                    <input matInput placeholder="Data de nascimento" formControlName="dataNascimento" />
+                </mat-form-field>
+                <br />
+                <mat-form-field>
+                    <input matInput placeholder="Tipo Sanguineo" formControlName="tipoSanguineo" />
+                </mat-form-field>
+                <br />
+                <mat-form-field>
+                    <input matInput placeholder="Nome mãe" formControlName="nomeMae" />
+                </mat-form-field>
+                <br />
+                <mat-form-field>
+                    <input matInput placeholder="Nome Pai" formControlName="nomePai" />
+                </mat-form-field>
+                <br />
+                <mat-form-field>
+                    <input matInput placeholder="Nome Social" formControlName="nomeSocial" />
+                </mat-form-field>
+                <br />
+                <mat-form-field>
+                    <input matInput placeholder="Estado Civil" formControlName="estadoCivil" />
+                </mat-form-field>
+                <br />
+                <mat-form-field>
+                    <input matInput placeholder="Nacionalidade" formControlName="nacionalidade" />
+                </mat-form-field>
+                <br />
+                <button mat-raised-button color="primary" (click)="onSubmit()">
+                    Cadastrar
+                </button>
+                <button mat-raised-button (click)="onCancel()">Cancelar</button>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>

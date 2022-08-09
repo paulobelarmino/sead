@@ -1,0 +1,55 @@
+<mat-toolbar class="menu_superior dark-primary-color text-primary-color">
+  
+
+  <button mat-icon-button (click)="toggleSideBar()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  
+  <button  style="background: url('/assets/PAGRN (3).svg') center no-repeat; width: 150px; height: inherit; border: none; background-size: 100%;">
+    
+  </button>
+
+  <div fxFlex fxLayout="row" fxLayoutAlign="flex-end"> 
+    <ul fxLayout="row" fxLayoutGap="5px">
+      <li>
+        <button mat-icon-button (click)="toggleContrast()">
+          <mat-icon>contrast</mat-icon>
+        </button>
+      </li>
+      <li >
+        <button class="text-primary-color"  mat-button [matMenuTriggerFor]="menu" > 
+          <img mat-card-lg-image src="/assets/user_avatar.png" width="40px"> 
+          Chico Lopes
+        </button>
+      </li>
+    </ul>
+  </div>
+  
+  
+
+    <mat-menu #menu="matMenu" xPosition="before">
+      <button mat-menu-item> <mat-icon>account_circle</mat-icon> PERFIL</button>
+      <button mat-menu-item> <mat-icon>support</mat-icon> SUPORTE</button>
+      <button mat-menu-item> <mat-icon>exit_to_app</mat-icon> SAIR</button>
+    </mat-menu>
+
+</mat-toolbar>
+
+
+
+<!--
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      <p>Auto-resizing sidenav</p>
+      <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+      <button (click)="showFiller = !showFiller" mat-raised-button>
+        Toggle extra text
+      </button>
+    </mat-drawer>
+  
+    
+    
+
+  </mat-drawer-container>
+
+  -->

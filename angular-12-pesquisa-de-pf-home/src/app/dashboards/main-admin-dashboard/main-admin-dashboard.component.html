@@ -1,0 +1,33 @@
+<div class="content" >
+  
+    <div class="page-title">
+      <h2 >PAINEL DE CONTROLE DE RECURSOS HUMANOS</h2>
+      <h4 >DEPARTAMENTO ESTADUAL DE TRÂNSITO - DETRAN-RN</h4>
+    </div>
+    <div fxLayout="row wrap" fxLayoutGap="10px grid" fxLayoutAlign="start stretch" >
+      
+      <div fxFlex.lt-sm="100"  fxFlex="25" fxFlex.md="25" fxFlex.sm="100" *ngFor="let item of cards" >
+        
+        <a routerLink="{{item.link_card}}">
+          <mat-card fxFlexFill fxLayout="column" class="card-dashboard">
+            <mat-card-title-group class="">
+              <mat-card-title>{{item.titulo_card}}</mat-card-title>
+              <mat-card-subtitle>{{item.descricao_card}}</mat-card-subtitle>
+              <div mat-card-avatar>
+                <mat-icon class="dark-primary-color">{{item.icon_card}}</mat-icon>
+                
+              </div>
+            </mat-card-title-group>
+
+
+            <mat-card-actions> 
+              
+            </mat-card-actions>
+          </mat-card>
+        </a>
+      </div>
+      
+
+    </div>
+    </div>
+  

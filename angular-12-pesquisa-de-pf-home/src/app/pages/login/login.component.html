@@ -1,0 +1,39 @@
+<div class="content" >
+    <div fxLayout="row wrap" fxLayoutGap="grid" fxLayoutAlign="space-around center" id="card">
+        <mat-card class="login-card">
+            <mat-card-header class="dark-primary-color ">
+                <img mat-card-xl-image src="../../../assets/PAGRN (3).svg"alt="logo_branca">
+            </mat-card-header>
+            <mat-card-title>{{mensagem.title_login}}</mat-card-title>
+            <mat-card-subtitle>{{mensagem.subtitle_login}}</mat-card-subtitle>
+            <mat-card-content>
+
+                <p>
+                    <mat-form-field appearance="outline">
+                        <mat-label>{{mensagem.label_matricula_login}}</mat-label>
+                        <input matInput placeholder="" required>
+                        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                        
+                    </mat-form-field>
+                </p>
+               
+                <p>
+                    <mat-form-field appearance="outline">
+                        <mat-label>{{mensagem.label_senha_login}}</mat-label>
+                        <input matInput placeholder="" [type]="hide ? 'password' : 'text'" formControlName="password" required>
+                        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        <mat-hint>{{mensagem.label_esqueceu_senha_login}}</mat-hint>
+                    </mat-form-field>
+                </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <a routerLink="/dashboard">
+                    <button class="button_generec button_large" type="submit" mat-button>{{mensagem.button_acessar_login}}</button>
+                </a>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>
+
+
+
